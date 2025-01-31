@@ -1,0 +1,156 @@
+.page_1{
+  height: 1000px;
+  border-bottom: 1px solid black  ;
+}
+main{
+
+  .main__content_page_1{
+    display: flex;
+    margin:0;
+    padding:0;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .page_1__info{
+    margin-top: 273px;
+    width: 810.44px;
+    height: 327.02px;
+  }
+
+  .page_1_maxInf{
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0;
+    color: #1C1C4A;
+    .main__content_span{
+      font-weight: bold;
+    }
+  }
+  .page_1_minInf{
+    color: #1C1C4A;
+    font-size: 28px;
+    margin: 0;
+    margin-top: 25px;
+  }
+  .page_1__image{
+    margin-top: 56px;
+    width: 943.13px;
+    height: 843.2px;
+  }
+  .page_1_circle_1{
+    left:80px;
+    top: 800px;
+    position: absolute;
+    width: 82.19px;
+    height: 83.15px;
+    border-radius: 50%;
+    border: 1px solid #1C1C4A;
+    background-color: white;
+  }
+  .page_1_circle_2 img{
+    top: 800px;
+    left: 105px;
+    position: absolute;
+    width: 49.32px;
+    height: 49.89px;
+    border-radius: 50%;
+    padding: 16.435px 16.62px;
+    background-color: #6463AD;
+  }
+  .page_1__btn{
+    font-family: "Montserrat Alternates", serif;
+    color: #000000;
+    text-decoration: none;
+    border: none;
+    background: none;
+    font-size: 24px;
+    position: absolute;
+    top: 813px;
+    left: 210px;
+    cursor: pointer;
+  }
+
+  .poppup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 150ms linear 150ms;
+
+    .popup__content{
+      position: relative;
+      text-align: center;
+      background-color: white;
+      width: 640px;
+      height: 800px;
+      padding: 40px 30px 5px 30px;
+      border-radius: 30px;
+      border: none;
+
+
+      .poppup__title{
+        font-weight: bold;
+        font-size: 48px;
+        color: #000000;
+      }
+      .poppup--content{
+        font-size: 30px;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .poppup_btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      bottom: 380px;
+      left: 680px;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+    }
+
+    .poppup_btn span, span::before, span::after{
+      background-color: white;
+      content: "";
+      cursor: pointer;
+      display: block;
+      height: 2px;
+      width: 20px;
+      z-index: 3;
+    }
+    .poppup_btn span:first-child{
+      background: none;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: auto;
+    }
+    .poppup_btn span::before{
+      transform: rotate(45deg);
+
+    }
+    .poppup_btn span::after{
+      transform: rotate(-45deg) translate(1.3px, -1.5px);
+    }
+  }
+  .poppup.open{
+    opacity: 1;
+    visibility: visible;
+  }
+}

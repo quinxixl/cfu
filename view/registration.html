@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/src/forms__scss/header__forms.css">
+    <link rel="stylesheet" href="/src/forms__scss/autoresetion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Системный анализ и управление</title>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo__button">
+            <img src="/src/image/new_logo.svg" alt = "Логотип Системного анализа и управления" class="logo__img">
+        </a>
+        <span class="logo__text">Системный анализ<br />и управления </span>
+    </header>
+    <main>
+        <div class="block_1">
+            <p class="h1__form">Регистрация</p>
+            <p class="href__form">У тебя уже есть аккаунт? <a href="/login">Войти</a></p>
+            <div class="form__container">
+                <form action="/register" method="post" id="form__autoresetion" novalidate data-js-form>
+                    <div class="name__form__container container_input">
+                        <label for="name__form">Имя</label>
+                        <input
+                                id="name__form"
+                                class="name__form"
+                                name="name"
+                                type="text"
+                                required
+                                minlength="2"
+                                maxlength="10"
+                                aria-errormessage="name-errors"
+                        >
+                        <span class="field__error" id="name-errors" data-js-field-errors> </span>
+                    </div>
+                    <div class="surname__form__container container_input">
+                        <label for="surname__form">Фамилия</label>
+                        <input
+                                id="surname__form"
+                                class="surname__form form__element"
+                                name="surname"
+                                type="text"
+                                required
+                                minlength="3"
+                                maxlength="10"
+                                aria-errormessage="surename-errors"
+                        >
+                        <span class="field__error" id="surename-errors" data-js-field-errors> </span>
+                    </div>
+                    <div class="mail__form__container container_input">
+                        <label for="mail__form">Электронная почта</label>
+                        <input
+                                id="mail__form"
+                                class="mail__form form__element"
+                                type="email"
+                                name="mail"
+                                required
+                                aria-errormessage="mail-errors"
+                        >
+                        <span class="field__error" id="mail-errors" data-js-field-errors> </span>
+                    </div>
+                    <div class="password__form__container container_input">
+                        <label for="password__form">Пароль</label>
+                        <input
+                                id="password__form"
+                                class="password__form form__element"
+                                name="password"
+                                type="password"
+                                required
+                                minlength="8"
+                                maxlength="20"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
+                                title="Пароль должен быть длиной от 8 до 20 символов, включать в себя как минимум одну цифру, одну букву прописную и заглавную"
+                                aria-errormessage="password-errors"
+                        >
+                        <a href="#" class="img__show">
+                            <img src="/src/image/Capa_1.svg" alt="" class="show__password">
+                        </a>
+                        <span class="field__error" id="password-errors" data-js-field-errors></span>
+                    </div>
+                    <p class="privacy__form">Нажимая на кнопку на кнопку “Создать аккаунт”, вы соглашаетесь с <br>
+                        <a href="#" class="privacy__href">Политикой конфиденциальности</a>
+                    </p>
+                    <input
+                            class="btn__form form__element"
+                            value="Создать аккаунт"
+                            type="submit"
+                            name="submit"
+                            id="form__submit"
+                    >
+                </form>
+
+            </div>
+        </div>
+        <div class="block_2">
+            <img src="/src/image/SVGViewer.svg" alt="Человек показывающий возрастающий график" class="hero">
+        </div>
+    </main>
+    <script src="/src/js/autoresetion.js"></script>
+</body>
+</html>

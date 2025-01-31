@@ -1,0 +1,58 @@
+body {
+  background-color: #DADAF1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat Alternates", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  border-bottom: 2px solid #000000;
+}
+header a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  gap: 35px;
+  margin: 0;
+  margin-top: 20px;
+  margin-right: 80px;
+}
+ul li a {
+  font-size: 28px;
+  color: #000000;
+}
+ul li .reg {
+  width: 170px;
+  border-radius: 40px;
+  padding: 10px 22px;
+  background-color: #6463AD;
+  color: white;
+}
+
+.header__logo {
+  display: flex;
+  margin-left: 80px;
+}
+.header__logo .logo__button .logo__img {
+  width: 92px;
+  height: 76px;
+}
+.header__logo .logo__text {
+  align-self: center;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  color: #000000;
+}
+
+/*# sourceMappingURL=header.css.map */

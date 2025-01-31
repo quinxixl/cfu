@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/src/relax_scss/Relax.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        {% block header %}
+            {{ include('header__relax.html.twig') }}
+        {% endblock %}
+    </header>
+    <main class="main">
+        <div class="main__page page-1">
+            <div class="main__page__title">
+                {% block head %}
+                    {{ include('title.html') }}
+                {% endblock %}
+            </div>
+            <div class="main__page__content">
+                <div class="second__card">
+                    {% for left in left__card %}
+                        <div class="second__card-wrapper">
+                            <p class="-wrapper-date">{{ left.date }}</p>
+                            <img src="/src/image/{{ left.image }}" alt="#" class="-wpapper-image">
+                            <p class="-wrapper-description">{{ left.description }}</p>
+                            <a href="#" class="-wrapper-btn">Узнать больше</a>
+                            <p class="-wrapper-title">{{ left.title }}</p>
+                            <img src="/src/image/{{ left.organizer }}" alt="#" class="-wrapper-organizer">
+                        </div>
+                    {% endfor %}
+{#                    {% for main in main__card %}#}
+{#                        <div class="main__card-wrapper">#}
+{#                            <p class="-wrapper-date">{{ main.date }}</p>#}
+{#                            <img src="/src/image/{{ main.image }}" alt="#" class="-wpapper-image">#}
+{#                            <p class="-wrapper-description">{{ main.description }}</p>#}
+{#                            <a href="#" class="-wrapper-btn">Узнать больше</a>#}
+{#                            <p class="-wrapper-title">{{ main.title }}</p>#}
+{#                            <img src="/src/image/{{ main.organizer }}" alt="#" class="-wrapper-organizer">#}
+{#                        </div>#}
+{#                    {% endfor %}#}
+{#                    {% for right in right__card %}#}
+{#                        <div class="second__card-wrapper">#}
+{#                            <p class="-wrapper-date">{{ right.date }}</p>#}
+{#                            <img src="/src/image/{{ right.image }}" alt="#" class="-wpapper-image">#}
+{#                            <p class="-wrapper-description">{{ right.description }}</p>#}
+{#                            <a href="#" class="-wrapper-btn">Узнать больше</a>#}
+{#                            <p class="-wrapper-title">{{ right.title }}</p>#}
+{#                            <img src="/src/image/{{ right.organizer }}" alt="#" class="-wrapper-organizer">#}
+{#                        </div>#}
+{#                    {% endfor %}#}
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

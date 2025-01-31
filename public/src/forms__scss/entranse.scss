@@ -1,0 +1,111 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+main{
+  margin-top: 75px;
+  margin-left: 80px;
+  margin-right: 80px;
+  display: flex;
+}
+
+.h1{
+  &__form{
+    margin: 0;
+    padding: 0;
+    font-size: 80px;
+    font-weight: bold;
+    color: #1C1C4A;
+    white-space: nowrap;
+  }
+
+}
+
+.href__form{
+  font-size: 24px;
+  font-weight: bold;
+  color: #1C1C4A;
+  opacity: 70%;
+  a{
+    opacity: 100%;
+    color: #0057AD;
+    text-decoration: none;
+  }
+  margin-bottom: 106px;
+}
+
+.container_input{
+  display: flex;
+  flex-direction: column;
+
+  input{
+    border: none;
+    border-radius: 20px;
+    background-color: #76768D;
+    font-size: 20px;
+    color: white;
+    height: 62px;
+    width: 252.99px;
+    padding-left: 20px;
+    padding-top: 2px;
+  }
+  input:focus{
+    outline: none;
+  }
+  label{
+    width: 250px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    color: white;
+  }
+}
+
+.mail__form__container{
+  input{
+    width: 546.47px;
+  }
+
+}
+.password__form__container {
+  input {
+    width: 546.47px;
+  }
+
+  .img__show {
+    position: relative;
+    left: 515px;
+    bottom: 47px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.data__recovery__form{
+  position: relative;
+  bottom: 30px;
+  left: 270px;
+  text-decoration: none;
+  color: #2970BA;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn__form {
+  position: relative;
+  top:20px;
+  left: 280px;
+  font-size: 32px;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  background-color: #1C1C4A;
+  padding: 10px 80px;
+  text-decoration: none;
+}
+
+.hero{
+  margin-left: 150px;
+  width: 877px;
+  height: 736px;
+}
