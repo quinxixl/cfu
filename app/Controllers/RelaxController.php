@@ -31,7 +31,25 @@ class RelaxController
                     'title' => 'zentry tysa',
                     'organizer' => 'test.org.jpg'
                 ]
-            ]
+            ],
+//            'main__card' => [
+//                [
+//                    'date'=>'',
+//                    'image'=>'',
+//                    'description'=>'',
+//                    'title'=>'',
+//                    'organizer' => ''
+//                ]
+//            ],
+//            'right__card' => [
+//                [
+//                    'date'=>'',
+//                    'image'=>'',
+//                    'description'=>'',
+//                    'title'=>'',
+//                    'organizer' => ''
+//                ]
+//            ]
         ]);
     }
 }

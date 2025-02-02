@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Config;
+
+class Config
+{
+    public function db(): array
+    {
+        return [
+            'driver' => 'mysql',
+            'host' => 'database',
+            'port' => 3306,
+            'database' => 'lamp',
+            'username' => 'lamp',
+            'password'=> 'lamp',
+            'charset' => 'utf8mb4_general_ci'
+        ];
+    }
+}
