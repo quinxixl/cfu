@@ -32,7 +32,7 @@ class RelaxController
                     'organizer' => 'test.org.jpg'
                 ]
             ],
-            'main__card' => [
+            'center__card' => [
                 [
                     'date'=>'05.12',
                     'image'=>'test.jpg',

@@ -7,7 +7,7 @@ use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
 
-$loader = new FilesystemLoader(APP_PATH . '/../view');
+$loader = new FilesystemLoader(APP_PATH . '/../view/relax');
 $twig = new Environment($loader);
 
 $dispatcher = require_once APP_PATH . '/../app/routes/web.php';

@@ -12,17 +12,18 @@
 <body>
     <header class="header">
         {% block header %}
-            {{ include('../relax/header__relax.html') }}
+            {{ include('header.html.twig') }}
         {% endblock %}
     </header>
     <main class="main">
         <div class="main__page page-1">
-            <div class="main__page__title">
+            <div class="main__title">
                 {% block head %}
-                    {{ include('../relax/title.html') }}
+                    {{ include('title.html') }}
                 {% endblock %}
             </div>
             <div class="main__page__content">
+                <div class="main__left__card">
                     {% for left in left__card %}
                         <div class="left__card-wrapper">
                             <p class="left__card-date">{{ left.date }}</p>
@@ -33,16 +34,30 @@
                             <img src="/src/image/{{ left.organizer }}" alt="#" class="left__card-organizer">
                         </div>
                     {% endfor %}
-                    {% for main in main__card %}
+                </div>
+                <div class="slider__btn">
+                    <a href="#">
+                        <img src="/src/image/Frame.png" alt="Нажмите чтобы переключить слайдер" class="slider__image">
+                    </a>
+                </div>
+                <div class="main__center__card">
+                    {% for center in center__card %}
                         <div class="main__card-wrapper">
-                            <p class="main__card-date">{{ main.date }}</p>
-                            <img src="/src/image/{{ main.image }}" alt="#" class="main__card-image">
-                            <p class="main__card-description">{{ main.description }}</p>
+                            <p class="main__card-date">{{ center.date }}</p>
+                            <img src="/src/image/{{ center.image }}" alt="#" class="main__card-image">
+                            <p class="main__card-description">{{ center.description }}</p>
                             <a class ="main__card-btn" href="#">Узнать больше</a>
-                            <p class="main__card-title">{{ main.title }}</p>
-                            <img src="/src/image/{{ main.organizer }}" alt="#" class="main__card-organizer">
+                            <p class="main__card-title">{{ center.title }}</p>
+                            <img src="/src/image/{{ center.organizer }}" alt="#" class="main__card-organizer">
                         </div>
                     {% endfor %}
+                </div>
+                <div class="slider__btn">
+                    <a href="#">
+                        <img src="/src/image/Frame.png" alt="Нажмите чтобы переключить слайдер" class="slider__image">
+                    </a>
+                </div>
+                <div class="main__right__card">
                     {% for right in right__card %}
                         <div class="right__card-wrapper">
                             <p class="right__card-date">{{ right.date }}</p>
@@ -53,6 +68,7 @@
                             <img src="/src/image/{{ right.organizer }}" alt="#" class="right__card-organizer">
                         </div>
                     {% endfor %}
+                </div>
             </div>
         </div>
     </main>
