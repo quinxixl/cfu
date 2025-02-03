@@ -1,8 +1,0 @@
-name: untitled
-recipe: lamp
-config:
-  webroot: public
-  php: 8.4
-services:
-  phpmyadmin:
-    type: phpmyadmin
