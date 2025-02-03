@@ -1,6 +1,0 @@
-name: pds
-recipe: lamp
-config:
-  webroot: public
-  php: 8.4
-
