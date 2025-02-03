@@ -27,29 +27,29 @@ class RelaxController
                 [
                     'date' => '01.02',
                     'image' => 'test.jpg',
-                    'description' => 'жоская туса ваще',
-                    'title' => 'zentry tysa',
+                    'description' => 'левая тусовка симфа',
+                    'title' => 'lb3',
                     'organizer' => 'test.org.jpg'
                 ]
             ],
-//            'main__card' => [
-//                [
-//                    'date'=>'',
-//                    'image'=>'',
-//                    'description'=>'',
-//                    'title'=>'',
-//                    'organizer' => ''
-//                ]
-//            ],
-//            'right__card' => [
-//                [
-//                    'date'=>'',
-//                    'image'=>'',
-//                    'description'=>'',
-//                    'title'=>'',
-//                    'organizer' => ''
-//                ]
-//            ]
+            'main__card' => [
+                [
+                    'date'=>'05.12',
+                    'image'=>'test.jpg',
+                    'description'=>'главная тусовка симфа',
+                    'title'=>'lb4',
+                    'organizer' => 'test.org.jpg'
+                ]
+            ],
+            'right__card' => [
+                [
+                    'date'=>'08.11',
+                    'image'=>'test.jpg',
+                    'description'=>'правая тусовка симфа',
+                    'title'=>'lb5',
+                    'organizer' => 'test.org.jpg'
+                ]
+            ]
         ]);
     }
 }

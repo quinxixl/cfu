@@ -5,3 +5,8 @@
 @import "h.css";
 @import "mini_card.css";
 @import "header.css";
+
+body{
+    width: 100%;
+    background-color: #DADAF1;
+}

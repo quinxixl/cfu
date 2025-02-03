@@ -9,6 +9,7 @@
   "private": true,
   "dependencies": {
     "css-loader": "^7.1.2",
+    "lando": "^0.0.1",
     "node.js": "^0.0.1-security",
     "npm": "^11.0.0",
     "php": "^1.1.0",

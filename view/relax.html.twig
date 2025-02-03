@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/src/relax_scss/Relax.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <header class="header">
         {% block header %}
-            {{ include('header__relax.html.twig') }}
+            {{ include('header__relax.html') }}
         {% endblock %}
     </header>
     <main class="main">
@@ -20,38 +23,36 @@
                 {% endblock %}
             </div>
             <div class="main__page__content">
-                <div class="second__card">
                     {% for left in left__card %}
-                        <div class="second__card-wrapper">
-                            <p class="-wrapper-date">{{ left.date }}</p>
-                            <img src="/src/image/{{ left.image }}" alt="#" class="-wpapper-image">
-                            <p class="-wrapper-description">{{ left.description }}</p>
-                            <a href="#" class="-wrapper-btn">Узнать больше</a>
-                            <p class="-wrapper-title">{{ left.title }}</p>
-                            <img src="/src/image/{{ left.organizer }}" alt="#" class="-wrapper-organizer">
+                        <div class="left__card-wrapper">
+                            <p class="left__card-date">{{ left.date }}</p>
+                            <img src="/src/image/{{ left.image }}" alt="#" class="left__card-image">
+                            <p class="left__card-description">{{ left.description }}</p>
+                            <a href="#" class="left__card-btn">Узнать больше</a>
+                            <p class="left__card-title">{{ left.title }}</p>
+                            <img src="/src/image/{{ left.organizer }}" alt="#" class="left__card-organizer">
                         </div>
                     {% endfor %}
-{#                    {% for main in main__card %}#}
-{#                        <div class="main__card-wrapper">#}
-{#                            <p class="-wrapper-date">{{ main.date }}</p>#}
-{#                            <img src="/src/image/{{ main.image }}" alt="#" class="-wpapper-image">#}
-{#                            <p class="-wrapper-description">{{ main.description }}</p>#}
-{#                            <a href="#" class="-wrapper-btn">Узнать больше</a>#}
-{#                            <p class="-wrapper-title">{{ main.title }}</p>#}
-{#                            <img src="/src/image/{{ main.organizer }}" alt="#" class="-wrapper-organizer">#}
-{#                        </div>#}
-{#                    {% endfor %}#}
-{#                    {% for right in right__card %}#}
-{#                        <div class="second__card-wrapper">#}
-{#                            <p class="-wrapper-date">{{ right.date }}</p>#}
-{#                            <img src="/src/image/{{ right.image }}" alt="#" class="-wpapper-image">#}
-{#                            <p class="-wrapper-description">{{ right.description }}</p>#}
-{#                            <a href="#" class="-wrapper-btn">Узнать больше</a>#}
-{#                            <p class="-wrapper-title">{{ right.title }}</p>#}
-{#                            <img src="/src/image/{{ right.organizer }}" alt="#" class="-wrapper-organizer">#}
-{#                        </div>#}
-{#                    {% endfor %}#}
-                </div>
+                    {% for main in main__card %}
+                        <div class="main__card-wrapper">
+                            <p class="main__card-date">{{ main.date }}</p>
+                            <img src="/src/image/{{ main.image }}" alt="#" class="main__card-image">
+                            <p class="main__card-description">{{ main.description }}</p>
+                            <a class ="main__card-btn" href="#">Узнать больше</a>
+                            <p class="main__card-title">{{ main.title }}</p>
+                            <img src="/src/image/{{ main.organizer }}" alt="#" class="main__card-organizer">
+                        </div>
+                    {% endfor %}
+                    {% for right in right__card %}
+                        <div class="right__card-wrapper">
+                            <p class="right__card-date">{{ right.date }}</p>
+                            <img src="/src/image/{{ right.image }}" alt="#" class="right__card-image">
+                            <p class="right__card-description">{{ right.description }}</p>
+                            <a href="#" class="right__card-btn">Узнать больше</a>
+                            <p class="right__card-title">{{ right.title }}</p>
+                            <img src="/src/image/{{ right.organizer }}" alt="#" class="right__card-organizer">
+                        </div>
+                    {% endfor %}
             </div>
         </div>
     </main>

@@ -1,0 +1,13 @@
+.header{
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  border-bottom: 2px solid #000000;
+  &__logo{
+    display: flex;
+    margin-left: 80px;
+  }
+  &__img{
+    width: 92px;
+    height: 76px;
+  }
+}
