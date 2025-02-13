@@ -59,6 +59,6 @@ class RelaxController
      */
     public function showPage(): void
     {
-        echo $this->twig->render('relax.html.twig', [$this->sliderData]);
+        echo $this->twig->render('relax.html.twig', ['sliderData' => $this->sliderData]);
     }
 }
