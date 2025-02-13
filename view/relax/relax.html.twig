@@ -22,57 +22,64 @@
                     {{ include('title.html') }}
                 {% endblock %}
             </div>
-            <div class="main__page__content">
-                <div class="main__left__card">
-                    {% for left in left__card %}
-                        <div class="left__card-wrapper card">
-                            <p class="left__card-date">{{ left.date }}</p>
-                            <img src="/src/image/{{ left.image }}" alt="#" class="left__card-image">
-                            <p class="left__card-description">{{ left.description }}</p>
-                            <a href="#" class="left__card-btn">Узнать больше</a>
-                            <p class="left__card-title">{{ left.title }}</p>
-                            <img src="/src/image/{{ left.organizer }}" alt="#" class="left__card-organizer">
-                        </div>
-                    {% endfor %}
-                </div>
+            <div class="slider-wrapper">
                 <div class="main__slider__btn">
-                    <a href="#">
-                        <img src="/src/image/Frame.png" alt="Нажмите чтобы переключить слайдер" class="slider__image">
+                    <a href="#" class="left__arrow">
+                        <img src="src/image/first__arrow.svg" alt="" class="left__arrow-img">
                     </a>
                 </div>
-                <div class="main__center__card">
-                    {% for center in center__card %}
-                        <div class="main__card-wrapper card">
-                            <p class="main__card-date">{{ center.date }}</p>
-                            <div class="main__card-div">
-                                <img src="/src/image/{{ center.image }}" alt="#" class="main__card-image">
-                                <p class="main__card-description">{{ center.description }}</p>
+                <div class="main__page__content">
+                    <div class="main__left__card slide">
+                        {% for left in left__card %}
+                            <div class="main__card-wrapper card ">
+                                <p class="main__card-date">{{ left.date }}</p>
+                                <div class="main__card-div">
+                                    <img src="/src/image/{{ left.image }}" alt="#" class="main__card-image">
+                                    <p class="main__card-description">{{ left.description }}</p>
+                                </div>
+                                <a class ="main__card-btn" href="#">Подробнее</a>
+                                <p class="main__card-title">{{ left.title }}</p>
+                                <img src="/src/image/{{ left.organizer }}" alt="#" class="main__card-organizer">
                             </div>
-                            <a class ="main__card-btn" href="#">Подробнее</a>
-                            <p class="main__card-title">{{ center.title }}</p>
-                            <img src="/src/image/{{ center.organizer }}" alt="#" class="main__card-organizer">
-                        </div>
-                    {% endfor %}
+                        {% endfor %}
+                    </div>
+                    <div class="main__center__card slide">
+                        {% for center in center__card %}
+                            <div class="main__card-wrapper card">
+                                <p class="main__card-date">{{ center.date }}</p>
+                                <div class="main__card-div">
+                                    <img src="/src/image/{{ center.image }}" alt="#" class="main__card-image">
+                                    <p class="main__card-description">{{ center.description }}</p>
+                                </div>
+                                <a class ="main__card-btn" href="#">Подробнее</a>
+                                <p class="main__card-title">{{ center.title }}</p>
+                                <img src="/src/image/{{ center.organizer }}" alt="#" class="main__card-organizer">
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="main__right__card slide">
+                        {% for right in right__card %}
+                            <div class="main__card-wrapper card">
+                                <p class="main__card-date">{{ right.date }}</p>
+                                <div class="main__card-div">
+                                    <img src="/src/image/{{ right.image }}" alt="#" class="main__card-image">
+                                    <p class="main__card-description">{{ right.description }}</p>
+                                </div>
+                                <a class ="main__card-btn" href="#">Подробнее</a>
+                                <p class="main__card-title">{{ right.title }}</p>
+                                <img src="/src/image/{{ right.organizer }}" alt="#" class="main__card-organizer">
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
-                <div class="main__slider__btn">
-                    <a href="#">
-                        <img src="/src/image/Frame.png" alt="Нажмите чтобы переключить слайдер" class="slider__image slider-2">
-                    </a>
-                </div>
-                <div class="main__right__card">
-                    {% for right in right__card %}
-                        <div class="right__card-wrapper card">
-                            <p class="right__card-date">{{ right.date }}</p>
-                            <img src="/src/image/{{ right.image }}" alt="#" class="right__card-image">
-                            <p class="right__card-description">{{ right.description }}</p>
-                            <a href="#" class="right__card-btn">Узнать больше</a>
-                            <p class="right__card-title">{{ right.title }}</p>
-                            <img src="/src/image/{{ right.organizer }}" alt="#" class="right__card-organizer">
-                        </div>
-                    {% endfor %}
-                </div>
+            </div>
+            <div class="main__slider__btn__2">
+                <a href="#" class="right__arrow">
+                    <img src="src/image/second_arrow.svg" alt="" class="right__arrow-img">
+                </a>
             </div>
         </div>
     </main>
+    <script src="/src/js/slider.js"></script>
 </body>
 </html>

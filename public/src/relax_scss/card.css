@@ -1,8 +1,11 @@
 .main__page__content {
   display: flex;
-  gap: 130px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-left: 80px;
   margin-right: 80px;
+  gap: 90px;
   margin-top: 50px;
 }
 .main .card {
@@ -66,7 +69,14 @@
   flex-direction: column;
 }
 .main__slider__btn {
-  margin-top: 100px;
+  position: absolute;
+  top: 560px;
+  left: 90px;
+}
+.main__slider__btn__2 {
+  position: absolute;
+  top: 560px;
+  right: 90px;
 }
 
 /*# sourceMappingURL=card.css.map */

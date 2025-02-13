@@ -1,9 +1,12 @@
 .main{
   &__page__content{
     display: flex;
-    gap: 130px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin-left: 80px;
     margin-right: 80px;
+    gap: 90px;
     margin-top: 50px;
   }
 
@@ -68,15 +71,20 @@
       height: 427px;
       display: flex;
       flex-direction: column;
-
     }
   }
 
 
-
   &__slider__btn{
-    margin-top: 100px;
+    position: absolute;
+    top: 560px;
+    left:90px;
   }
 
+  &__slider__btn__2{
+    position: absolute;
+    top: 560px;
+    right: 90px;
+  }
 
 }
