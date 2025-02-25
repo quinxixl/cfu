@@ -7,7 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <title>Document</title>
+
+    <script>
+        window.sliderData = {{ sliderData | json_encode() | raw }};
+    </script>
 </head>
 <body>
     <header class="header">
@@ -22,64 +27,73 @@
                     {{ include('title.html') }}
                 {% endblock %}
             </div>
-            <div class="slider-wrapper">
-                <div class="main__slider__btn">
-                    <a href="#" class="left__arrow">
-                        <img src="src/image/first__arrow.svg" alt="" class="left__arrow-img">
-                    </a>
-                </div>
-                <div class="main__page__content">
-                    <div class="main__left__card slide">
-                        {% for left in left__card %}
-                            <div class="main__card-wrapper card ">
-                                <p class="main__card-date">{{ left.date }}</p>
-                                <div class="main__card-div">
-                                    <img src="/src/image/{{ left.image }}" alt="#" class="main__card-image">
-                                    <p class="main__card-description">{{ left.description }}</p>
-                                </div>
-                                <a class ="main__card-btn" href="#">Подробнее</a>
-                                <p class="main__card-title">{{ left.title }}</p>
-                                <img src="/src/image/{{ left.organizer }}" alt="#" class="main__card-organizer">
-                            </div>
-                        {% endfor %}
+            <div class="swiper">
+                <div class="slider-wrapper">
+                    <div class="main__page__content swiper-wrapper" id="slider">
+
                     </div>
-                    <div class="main__center__card slide">
-                        {% for center in center__card %}
-                            <div class="main__card-wrapper card">
-                                <p class="main__card-date">{{ center.date }}</p>
-                                <div class="main__card-div">
-                                    <img src="/src/image/{{ center.image }}" alt="#" class="main__card-image">
-                                    <p class="main__card-description">{{ center.description }}</p>
-                                </div>
-                                <a class ="main__card-btn" href="#">Подробнее</a>
-                                <p class="main__card-title">{{ center.title }}</p>
-                                <img src="/src/image/{{ center.organizer }}" alt="#" class="main__card-organizer">
-                            </div>
-                        {% endfor %}
+                    <div class="main__slider__btn">
+                        <a href="#" class="left__arrow">
+                            <img src="src/image/first__arrow.svg" alt="" class="left__arrow-img">
+                        </a>
                     </div>
-                    <div class="main__right__card slide">
-                        {% for right in right__card %}
-                            <div class="main__card-wrapper card">
-                                <p class="main__card-date">{{ right.date }}</p>
-                                <div class="main__card-div">
-                                    <img src="/src/image/{{ right.image }}" alt="#" class="main__card-image">
-                                    <p class="main__card-description">{{ right.description }}</p>
-                                </div>
-                                <a class ="main__card-btn" href="#">Подробнее</a>
-                                <p class="main__card-title">{{ right.title }}</p>
-                                <img src="/src/image/{{ right.organizer }}" alt="#" class="main__card-organizer">
-                            </div>
-                        {% endfor %}
+                    <div class="main__slider__btn__2">
+                        <a href="#" class="right__arrow">
+                            <img src="src/image/second_arrow.svg" alt="" class="right__arrow-img">
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="main__slider__btn__2">
-                <a href="#" class="right__arrow">
-                    <img src="src/image/second_arrow.svg" alt="" class="right__arrow-img">
+        </div>
+        <div class="main__page page-2">
+            <p class="title__page-2">
+                Все мероприятия
+            </p>
+            <div class="main__page-form">
+                {% block form %}
+                    {{ include('form__relax.html') }}
+                {% endblock %}
+            </div>
+            <div class="card__wrapper">
+                <a href="#" class="card__href">
+                    <div class="card">
+                        <img src="/src/image/test.jpg" alt="" class="card__img">
+                        <p class="card__name">jiadidjas</p>
+                        <img src="/src/image/test.org.jpg" alt="" class="card__logo">
+                    </div>
+                </a>
+                <a href="#" class="card__href">
+                    <div class="card">
+                        <img src="/src/image/test.jpg" alt="" class="card__img">
+                        <p class="card__name">jiadidjas</p>
+                        <img src="/src/image/test.org.jpg" alt="" class="card__logo">
+                    </div>
+                </a>
+                <a href="#" class="card__href">
+                    <div class="card">
+                        <img src="/src/image/test.jpg" alt="" class="card__img">
+                        <p class="card__name">jiadidjas</p>
+                        <img src="/src/image/test.org.jpg" alt="" class="card__logo">
+                    </div>
+                </a>
+                <a href="#" class="card__href">
+                    <div class="card">
+                        <img src="/src/image/test.jpg" alt="" class="card__img">
+                        <p class="card__name">jiadidjas</p>
+                        <img src="/src/image/test.org.jpg" alt="" class="card__logo">
+                    </div>
+                </a>
+                <a href="#" class="card__href">
+                    <div class="card">
+                        <img src="/src/image/test.jpg" alt="" class="card__img">
+                        <p class="card__name">jiadidjas</p>
+                        <img src="/src/image/test.org.jpg" alt="" class="card__logo">
+                    </div>
                 </a>
             </div>
         </div>
     </main>
     <script src="/src/js/slider.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>

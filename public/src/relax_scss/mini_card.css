@@ -1,3 +1,41 @@
-
+.card {
+  background-color: #D9D9D9;
+  width: 320px;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+}
+.card__href {
+  display: block;
+  width: 320px;
+  height: 430px;
+}
+.card__img {
+  width: 200px;
+  height: 259.11px;
+}
+.card__name {
+  font-size: 24px;
+  color: #000000;
+  font-weight: lighter;
+  margin-top: 10px;
+}
+.card__logo {
+  width: 75px;
+  height: 59.64px;
+  margin-top: 10px;
+}
+.card__wrapper {
+  display: grid;
+  gap: 62px;
+  grid-template-columns: repeat(4, 320px);
+  margin-top: 60px;
+  align-items: center;
+  justify-content: center;
+}
 
 /*# sourceMappingURL=mini_card.css.map */
