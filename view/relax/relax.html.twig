@@ -12,6 +12,8 @@
 
     <script>
         window.sliderData = {{ sliderData | json_encode() | raw }};
+
+        window.cardData = {{ cardData | json_encode() | raw }}
     </script>
 </head>
 <body>
@@ -54,45 +56,12 @@
                     {{ include('form__relax.html') }}
                 {% endblock %}
             </div>
-            <div class="card__wrapper">
-                <a href="#" class="card__href">
-                    <div class="card">
-                        <img src="/src/image/test.jpg" alt="" class="card__img">
-                        <p class="card__name">jiadidjas</p>
-                        <img src="/src/image/test.org.jpg" alt="" class="card__logo">
-                    </div>
-                </a>
-                <a href="#" class="card__href">
-                    <div class="card">
-                        <img src="/src/image/test.jpg" alt="" class="card__img">
-                        <p class="card__name">jiadidjas</p>
-                        <img src="/src/image/test.org.jpg" alt="" class="card__logo">
-                    </div>
-                </a>
-                <a href="#" class="card__href">
-                    <div class="card">
-                        <img src="/src/image/test.jpg" alt="" class="card__img">
-                        <p class="card__name">jiadidjas</p>
-                        <img src="/src/image/test.org.jpg" alt="" class="card__logo">
-                    </div>
-                </a>
-                <a href="#" class="card__href">
-                    <div class="card">
-                        <img src="/src/image/test.jpg" alt="" class="card__img">
-                        <p class="card__name">jiadidjas</p>
-                        <img src="/src/image/test.org.jpg" alt="" class="card__logo">
-                    </div>
-                </a>
-                <a href="#" class="card__href">
-                    <div class="card">
-                        <img src="/src/image/test.jpg" alt="" class="card__img">
-                        <p class="card__name">jiadidjas</p>
-                        <img src="/src/image/test.org.jpg" alt="" class="card__logo">
-                    </div>
-                </a>
+            <div class="card__wrapper" id="card__wrapper">
+
             </div>
         </div>
     </main>
+    <script src="/src/js/cardAdd.js"></script>
     <script src="/src/js/slider.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
