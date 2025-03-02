@@ -1,4 +1,2 @@
 .idea/
-app/Config
-app/Database
 .lando.yml
