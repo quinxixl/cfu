@@ -5,6 +5,7 @@ use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
+use App\Database\Database;
 
 class RelaxController
 {
@@ -28,45 +29,8 @@ class RelaxController
 
     private function getSliderData(): array
     {
-        return [
-            [
-                'date' => '01.02',
-                'image' => 'test.jpg',
-                'description' => 'левая тусовка симфа',
-                'title' => 'lb3',
-                'organizer' => 'test.org.jpg'
-            ],
-            [
-                'date'=>'05.12',
-                'image'=>'test.jpg',
-                'description'=>'главная тусовка симфа',
-                'title'=>'lb4',
-                'organizer' => 'test.org.jpg'
-            ],
-            [
-                'date'=>'08.11',
-                'image'=>'test.jpg',
-                'description'=>'правая тусовка симфа',
-                'title'=>'lb5',
-                'organizer' => 'test.org.jpg'
-            ],
-            [
-                'date'=>'08.12',
-                'image'=>'test.jpg',
-                'description'=>'чето там',
-                'title'=>'lb6',
-                'organizer' => 'test.org.jpg'
-            ],
-            [
-                'date'=>'03.12',
-                'image'=>'test.jpg',
-                'description'=>'еще чето там',
-                'title'=>'lb6',
-                'organizer' => 'test.org.jpg'
-            ]
-        ];
+        return Database::fetchColumns('cards', ['date', 'image', 'description', 'title', 'organizer']);
     }
-
     private function getCardData(): array
     {
         return [

@@ -2,31 +2,33 @@
 
 namespace App\Database;
 
-use App\Config\Config;
 
-class Database implements DatabaseInterface
+class Database
 {
 
-    private Config $config;
-    private \PDO $pdo;
-
-    public function __construct()
+    private static function connect(): \PDO
     {
-        $this->connect();
-    }
-
-    public function insert()
-    {
-        // TODO: Implement insert() method.
-    }
-
-    private function connect(): void
-    {
-        $db = $this->config->db();
+        $db = require_once __DIR__ . "/../config/config.php";
         try {
-            $this->pdo = new \PDO("{$db['driver']}:host={$db['host']};port={$db['port']};dbname={$db['database']};", $db['username'], $db['password']);
+            self::$pdo = new \PDO("{$db['driver']}:host={$db['host']};port={$db['port']};dbname={$db['database']};", $db['username'], $db['password']);
         } catch (\PDOException $e) {
             echo "Failed connection: {$e->getMessage()}";
         }
+        return self::$pdo;
+    }
+    private static \PDO $pdo;
+
+
+    public static function fetchColumns(string $table, array $columns, string $where = '', array $params = []): array {
+        $columnList = implode(', ', $columns);
+        $sql = "SELECT $columnList FROM $table";
+
+        if (!empty($where)) {
+            $sql .= " WHERE $where";
+        }
+
+        $stmt = self::connect()->prepare($sql);
+        $stmt->execute($params);
+        return $stmt->fetchAll();
     }
 }
