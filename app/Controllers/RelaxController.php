@@ -29,61 +29,11 @@ class RelaxController
 
     private function getSliderData(): array
     {
-        return Database::fetchColumns('cards', ['date', 'image', 'description', 'title', 'organizer']);
+        return Database::fetchColumns('cards', ['date', 'image', 'description', 'title', 'organizer'], 'id <= ?', [6]);
     }
     private function getCardData(): array
     {
-        return [
-            [
-                'image' => 'test.jpg',
-                'title' => 'lb1',
-                'organizer' => 'test.org.jpg'
-            ],
-            [
-                'image'=>'test.jpg',
-                'title'=>'lb2',
-                'organizer' => 'test.org.jpg'
-            ],
-            [
-                'image'=>'test.jpg',
-                'title'=>'lb3',
-                'organizer' => 'test.org.jpg'
-            ],
-            [
-                'image'=>'test.jpg',
-                'title'=>'lb4',
-                'organizer' => 'test.org.jpg'
-            ],
-            [
-                'image'=>'test.jpg',
-                'title'=>'lb5',
-                'organizer' => 'test.org.jpg'
-            ],
-            [
-                'image'=>'test.jpg',
-                'title'=>'lb6',
-                'organizer' => 'test.org.jpg'
-            ],
-            [
-                'image' => 'test.jpg',
-                'title'=>'lb7',
-                'organizer' => 'test.org.jpg'
-            ],
-            [
-                'image'=>'test.jpg',
-                'title'=>'lb8',
-                'organizer' => 'test.org.jpg'
-            ],
-            [
-                'image'=>'test.jpg',
-                'title'=>'lb9',
-                'organizer' => 'test.org.jpg'
-            ],
-            [
-                'image' => 'test.jpg',
-                'title'=>'lb10',
-                'organizer' => 'test.org.jpg'
-            ],
-        ];
+        return Database::fetchColumns('cards', ['image', 'title', 'organizer', 'poppup_desc', 'event_link']);
     }
+
 }
