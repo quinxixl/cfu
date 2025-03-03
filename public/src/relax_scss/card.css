@@ -1,3 +1,7 @@
+.main__page {
+  border-bottom: 1px solid black;
+  padding-bottom: 100px;
+}
 .main__page__content {
   display: flex;
   justify-content: center;
@@ -63,15 +67,24 @@
 }
 .main__slider__btn {
   position: absolute;
-  top: 560px;
-  left: 40px;
+  top: 260px;
+  left: 20px;
   z-index: 10;
 }
 .main__slider__btn__2 {
   position: absolute;
-  top: 560px;
-  right: 40px;
+  top: 260px;
+  right: 10px;
   z-index: 10;
+}
+
+.swiper {
+  margin-top: 100px;
+}
+
+.swiper-wrapper {
+  margin-left: 90px;
+  margin-right: 90px;
 }
 
 /*# sourceMappingURL=card.css.map */

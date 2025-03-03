@@ -13,9 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     <img src="/src/image/${ item.organizer }" alt="" class="card__logo">
                     <div class="card__poppup">
                         <button type="button" class="poppup__close"><span></span></button>
+                        <img src="/src/image/${ item.organizer }" alt="" class="background__popupp">
                         <div class="card__poppup_content">
                             <p class="card__title">${item.title}</p>
-                            <p class="card__dscription">${item.description}</p>
+                            <p class="card__dscription">${item.poppup_desc}</p>
+                            <a href="${item.event_link}" class="card__btn">Хочу пойти</a>
                         </div>
                     </div>
                 </div>    
