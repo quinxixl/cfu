@@ -50,8 +50,8 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 320px;
-  left: 560px;
+  bottom: 300px;
+  left: 480px;
   z-index: 2;
   background-color: #968FBE;
   width: 40px;
@@ -97,24 +97,26 @@
 
 
 .card__{
+  &poppup_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
   &title{
-    position: relative;
-    bottom: 260px;
+    z-index: 4;
     color: white;
     font-weight: bold;
     font-size: 48px;
   }
   &dscription{
-    position: relative;
-    bottom: 160px;
+    z-index: 4;
     color: white;
     font-weight: normal;
     font-size: 32px;
   }
   &btn{
-    position: relative;
-    top: 210px;
-    left: 50px;
+    z-index: 4;
     width: 300px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -157,3 +159,11 @@
 .poppup__close span::after{
   transform: rotate(-45deg) translate(1.3px, -1.5px);
 }
+
+.background__poppup{
+  position: absolute;
+  left: 730px;
+  top: 190px;
+  z-index: 3;
+}
+
