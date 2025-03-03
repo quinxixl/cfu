@@ -33,7 +33,7 @@ class RelaxController
     }
     private function getCardData(): array
     {
-        return Database::fetchColumns('cards', ['image', 'title', 'organizer', 'poppup_desc', 'event_link']);
+        return Database::fetchColumns('cards', ['image', 'title', 'organizer', 'poppup_desc', 'event_link', 'logo']);
     }
 
 }
