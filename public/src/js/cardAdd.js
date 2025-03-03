@@ -17,12 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class="card__poppup_content">
                             <p class="card__title">${item.title}</p>
                             <p class="card__dscription">${item.poppup_desc}</p>
-                            <a href="${item.event_link}" class="card__btn">Хочу пойти</a>
+                            <a href="${item.event_link}" class="card__btn" target="_blank" id="event_link" rel="noopener noreferrer">Хочу пойти</a>
                         </div>
                     </div>
                 </div>    
                 `
             cardContainer.appendChild(card)
+        })
+        document.addEventListener('click', function (evt) {
+            if (evt.target.matches(".card__btn")){
+                window.open(evt.target.href, "_blank")
+            }
         })
         document.querySelectorAll('.card__href').forEach(card => {
             const poppup = card.querySelector('.card__poppup');
