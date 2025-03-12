@@ -24,7 +24,7 @@ class RelaxController
      */
     public function showPage(): void
     {
-        echo $this->twig->render('relax.html.twig', ['sliderData' => $this->getSliderData(), 'cardData' => $this->getCardData()]);
+        echo $this->twig->render('@relax/relax.html.twig', ['sliderData' => $this->getSliderData(), 'cardData' => $this->getCardData()]);
     }
 
     private function getSliderData(): array

@@ -19,14 +19,14 @@
 <body>
     <header class="header">
         {% block header %}
-            {{ include('header.html.twig') }}
+            {{ include('@relax/header.html.twig') }}
         {% endblock %}
     </header>
     <main class="main">
         <div class="main__page page-1">
             <div class="main__title">
                 {% block head %}
-                    {{ include('title.html') }}
+                    {{ include('@relax/title.html.twig') }}
                 {% endblock %}
             </div>
             <div class="swiper">
@@ -62,7 +62,7 @@
             </p>
             <div class="main__page-form">
                 {% block form %}
-                    {{ include('form__relax.html') }}
+                    {{ include('@relax/form__relax.html.twig') }}
                 {% endblock %}
             </div>
             <div class="card__wrapper" id="card__wrapper">
