@@ -1,25 +1,24 @@
-document.addEventListener('click', function (evt) {
-    if (evt.target.matches(".card__btn")){
-        window.open(evt.target.href, "_blank")
-    }
-})
-document.querySelectorAll('.card__href').forEach(card => {
-    const poppup = card.querySelector('.card__poppup');
-    const closeBtn = card.querySelector('.poppup__close');
+window.addEventListener("load", function () {
+    document.querySelectorAll('.card__href').forEach(card => {
+        const poppup = card.closest('.card').querySelector('.card__poppup');
+        const closeBtn = card.closest('.card').querySelector('.poppup__close');
 
-    card.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        poppup.classList.add('open');
-    });
+        if (!poppup || !closeBtn) return;
 
-    closeBtn.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        poppup.classList.remove('open');
-    });
+        card.addEventListener('click', (evt) => {
+            evt.preventDefault();
+            poppup.classList.add('open');
+        });
 
-    window.addEventListener('click', (evt) => {
-        if (evt.target === poppup) {
+        closeBtn.addEventListener('click', (evt) => {
+            evt.preventDefault();
             poppup.classList.remove('open');
-        }
+        });
+
+        window.addEventListener('click', (evt) => {
+            if (evt.target === poppup) {
+                poppup.classList.remove('open');
+            }
+        });
     });
 });
