@@ -1,0 +1,38 @@
+.header{
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  border-bottom: 2px solid #000000;
+  &__logo{
+    display: flex;
+    margin-left: 80px;
+  }
+  &__img{
+    width: 92px;
+    height: 76px;
+  }
+  &__text{
+    align-self: center;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    color: #000000;
+  }
+  &__list{
+    display: flex;
+    gap: 35px;
+    margin-top:20px;
+    margin-right: 80px;
+    .reg{
+      width: 170px;
+      border-radius: 40px;
+      padding: 10px 22px;
+      background-color: #6463AD;
+      color: white;
+    }
+  }
+  &__element{
+    font-size: 28px;
+    color: #000000;
+  }
+}

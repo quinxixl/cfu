@@ -1,3 +1,11 @@
 @import "reset.css";
 @import "title.css";
 @import "card.css";
+@import "header.css";
+@import "font.css";
+
+
+body{
+    width: 100%;
+    background-color: #DADAF1;
+}
