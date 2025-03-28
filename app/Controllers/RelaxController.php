@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Collections\RelaxCollection;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -27,13 +28,15 @@ class RelaxController
         echo $this->twig->render('@relax/relax.html.twig', ['sliderData' => $this->getSliderData(), 'cardData' => $this->getCardData()]);
     }
 
-    private function getSliderData(): array
+    private function getSliderData(): RelaxCollection
     {
-        return Database::fetchColumns('cards', ['date', 'image', 'description', 'title', 'organizer'], 'id <= ?', [6]);
+        $slides = Database::fetchColumns('cards', ['date', 'image', 'description', 'title', 'organizer'], 'id <= ?', [6]);
+        return new RelaxCollection($slides);
     }
-    private function getCardData(): array
+    private function getCardData(): RelaxCollection
     {
-        return Database::fetchColumns('cards', ['image', 'title', 'organizer', 'poppup_desc', 'event_link', 'logo']);
+        $cards = Database::fetchColumns('cards', ['image', 'title', 'organizer', 'poppup_desc', 'event_link', 'logo']);
+        return new RelaxCollection($cards);
     }
 
 }
