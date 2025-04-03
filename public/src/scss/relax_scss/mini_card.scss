@@ -2,10 +2,6 @@
   background-color: #D9D9D9;
   width: 320px;
   height: 430px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border-radius: 20px;
   border: none;
 
@@ -18,9 +14,12 @@
   &__img{
     width: 200px;
     height: 259.11px;
+    margin-top: 30px;
+    margin-left: 60px;
   }
 
   &__name{
+    text-align: center;
     font-size: 24px;
     color:#000000;
     font-weight: lighter;
@@ -28,6 +27,7 @@
   }
 
   &__logo{
+    margin-left: 122px;
     width: 75px;
     height: 59.64px;
     margin-top: 10px;
@@ -81,8 +81,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: #BCBCD5;
     width: 500px;
     height: 700px;
@@ -97,12 +97,6 @@
 
 
 .card__{
-  &poppup_content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-  }
   &title{
     z-index: 4;
     color: white;
@@ -116,6 +110,7 @@
     font-size: 32px;
   }
   &btn{
+    text-align: center;
     z-index: 4;
     width: 300px;
     padding-top: 10px;

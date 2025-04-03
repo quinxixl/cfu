@@ -17,14 +17,16 @@
     </header>
     <main>
         <p class="main__title">Полезная информация</p>
-        {% for item in InfoData %}
-            <div class="main__wrapper">
-                <a href="" class="main__href">
+        <div class="main__card-wrapper">
+            {% for item in InfoData %}
+            <a href="" class="main__href">
+                <div class="main__wrapper">
                     <img src="/src/image/{{item.image}}" alt="" class="main__image">
                     <p class="main__description">{{ item.description }}</p>
-                </a>
-            </div>
-        {% endfor %}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
     </main>
 </body>
 </html>

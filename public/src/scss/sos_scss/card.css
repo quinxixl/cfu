@@ -1,3 +1,30 @@
-
+.main__card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  row-gap: 43px;
+  column-gap: 197px;
+  margin-left: 239px;
+  margin-top: 70px;
+}
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 30px;
+  background-color: #6D6CA3;
+  width: 350px;
+  height: 350px;
+}
+.main__image {
+  width: 200px;
+  height: 200px;
+}
+.main__description {
+  font-size: 28px;
+  color: white;
+  margin-top: 20px;
+}
 
 /*# sourceMappingURL=card.css.map */
