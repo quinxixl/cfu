@@ -30,20 +30,6 @@
                 {% endblock %}
             </div>
             <div class="swiper">
-                    <div class="swiper-wrapper" id="slider">
-                        {% for item in sliderData  %}
-                            <div class="main__card-wrapper swiper-slide">
-                                <p class="main__card-date">{{item.date}}</p>
-                                <div class="main__card-div">
-                                    <img src="/src/image/{{item.image}}" alt="#" class="main__card-image">
-                                    <p class="main__card-description">{{item.description}}</p>
-                                </div>
-                                <a class="main__card-btn" href="#">Подробнее</a>
-                                <p class="main__card-title">{{item.title}}</p>
-                                <img src="/src/image/{{item.organizer}}" alt="#" class="main__card-organizer">
-                            </div>
-                        {% endfor %}
-                    </div>
                     <div class="main__slider__btn">
                         <a href="#" class="left__arrow">
                             <img src="src/image/first__arrow.svg" alt="" class="left__arrow-img">
