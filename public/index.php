@@ -10,6 +10,7 @@ use Twig\Loader\FilesystemLoader;
 $loader = new \Twig\Loader\FilesystemLoader();
 $loader->addPath(APP_PATH . '/../view/relax', 'relax');
 $loader->addPath(APP_PATH . '/../view/sos', 'sos');
+$loader->addPath(APP_PATH . '/../view/disciplines', 'disciplines');
 $twig = new \Twig\Environment($loader);
 
 $dispatcher = require_once APP_PATH . '/../app/routes/web.php';
