@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\DisciplinesController;
 use App\Controllers\IndexController;
 use App\Controllers\LoginController;
 use App\Controllers\RegistrationController;
@@ -27,4 +28,5 @@ return simpleDispatcher(function (RouteCollector $r) {
     $r->addRoute('GET', '/sos/info', [SosInfoController::class, 'showPage']);
     $r->addRoute('GET', '/sos/program', [SosProgramController::class, 'showPage']);
     $r->addRoute('GET', '/sos/lectures', [SosLecturesController::class, 'showPage']);
+    $r->addRoute('GET','/disciplines', [DisciplinesController::class, 'showPage']);
 });
