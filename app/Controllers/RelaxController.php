@@ -28,15 +28,13 @@ class RelaxController
         echo $this->twig->render('@relax/relax.html.twig', ['sliderData' => $this->getSliderData(), 'cardData' => $this->getCardData()]);
     }
 
-    private function getSliderData(): RelaxCollection
+    private function getSliderData(): array
     {
-        $slides = Database::fetchColumns('cards', ['date', 'image', 'description', 'title', 'organizer'], 'id <= ?', [6]);
-        return new RelaxCollection($slides);
+        return Database::fetchColumns('cards', ['date', 'image', 'description', 'title', 'organizer'], 'id <= ?', [6]);
     }
-    private function getCardData(): RelaxCollection
+    private function getCardData(): array
     {
-        $cards = Database::fetchColumns('cards', ['image', 'title', 'organizer', 'poppup_desc', 'event_link', 'logo']);
-        return new RelaxCollection($cards);
+        return Database::fetchColumns('cards', ['image', 'title', 'organizer', 'poppup_desc', 'event_link', 'logo']);
     }
 
 }
