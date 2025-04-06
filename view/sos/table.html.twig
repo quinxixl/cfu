@@ -1,0 +1,16 @@
+<div class="main__table table__container">
+    {%for item in table %}
+        <div class="table__item">
+            <p class="table__name">{{ item.name }}</p>
+            <p class="table__description">{{ item.description }}</p>
+            <a href="#" class="table__href">
+                <img src="#" alt="Открыть список" class="table__image">
+            </a>
+            <div class="table__container-item">
+                {% for item in secondTable %}
+                    <p class="table__title">{{ item.title }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</div>

@@ -22,6 +22,8 @@
   height: 200px;
 }
 .main__description {
+  text-align: center;
+  align-self: center;
   font-size: 28px;
   color: white;
   margin-top: 20px;
