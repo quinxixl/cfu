@@ -1,10 +1,10 @@
 <?php
 return [
     'driver' => 'mysql',
-    'host' => 'database',
+    'host' => 'db',
     'port' => 3306,
-    'database' => 'lamp',
-    'username' => 'lamp',
-    'password'=> 'lamp',
+    'database' => 'cfu',
+    'username' => 'user',
+    'password'=> 'pass',
     'charset' => 'utf8mb4_general_ci'
 ];

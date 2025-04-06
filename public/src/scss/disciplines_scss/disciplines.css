@@ -2,10 +2,3 @@
 @import "courses.css";
 @import "mainPage.css";
 @import "header.css";
-@import "reset.css";
-@import "font.css";
-
-body{
-    width: 100%;
-    background-color: #DADAF1;
-}

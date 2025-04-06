@@ -21,12 +21,10 @@
         <main class="main">
             <div class="container">
                 {% for item in discData %}
-                    <div class="card__container">
-                        <a href="#" class="card__href">
-                            <img src="{{ item.image }}" class="card__image" alt="">
-                            <p class="card__title">{{ item.title }}</p>
-                        </a>
-                    </div>
+                    <a href="#" class="card__href">
+                        <img src="/src/image/{{ item.image }}" class="card__image" alt="">
+                        <p class="card__title">{{ item.title }}</p>
+                    </a>
                 {% endfor %}
             </div>
         </main>
