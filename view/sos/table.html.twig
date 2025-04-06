@@ -1,5 +1,5 @@
 <div class="main__table table__container">
-    {%for item in tableData %}
+    {% for item in tableData %}
         <div class="table__item">
             <div class="table-container">
                 <div class="table-container-1">
@@ -7,16 +7,30 @@
                 </div>
                 <div class="table-container-2">
                     <p class="table__description">{{ item.count }}</p>
-                    <a href="#" class="table__href">
+                    <a href="#" class="table__href toggle-dropdown">
                         <img src="/src/image/Capa_1.png" alt="Открыть список" class="table__image">
                     </a>
                 </div>
             </div>
-            <div class="table__container-item">
+            <div class="table__container-item" style="display: none;">
                 {% for i in item.desc %}
-                    <p class="table__title">{{ i }}</p>
+                    <div class="table__title">{{ i }}</div>
                 {% endfor %}
             </div>
         </div>
     {% endfor %}
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggles = document.querySelectorAll('.toggle-dropdown');
+
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                const container = this.closest('.table__item').querySelector('.table__container-item');
+                container.style.display = container.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    });
+</script>
