@@ -23,6 +23,47 @@ class SosDocumentController
      */
     public function showPage(): void
     {
-        echo $this->twig->render('@sos/document_sos.html.twig');
+        echo $this->twig->render('@sos/document_sos.html.twig', ['tableData' => $this->getMainData()]);
+    }
+
+    private function getMainData(): array
+    {
+        return [
+            [
+                'name' => 'История России',
+                'count' => '13 лекций',
+                'desc' => [
+                    'первая', 'vtoraya', 'tretya', 'fourth', 'fifth','sixth', 'seven'
+                ]
+            ],
+            [
+                'name' => 'Человек и право',
+                'count' => '14 лекций',
+                'desc' => [
+                    'первая', 'vtoraya', 'tretya', 'fourth', 'fifth','sixth', 'seven'
+                ]
+            ],
+            [
+                'name' => 'Высшая математика',
+                'count' => '10 лекций',
+                'desc' => [
+                    'первая', 'vtoraya', 'tretya', 'fourth', 'fifth','sixth', 'seven'
+                ]
+            ],
+            [
+                'name' => 'Основы Российской Государственности',
+                'count' => '12 лекций',
+                'desc' => [
+                    'первая', 'vtoraya', 'tretya', 'fourth', 'fifth','sixth', 'seven'
+                ]
+            ],
+            [
+                'name' => 'Математический анализ и чето еще',
+                'count' => '9 лекций',
+                'desc' => [
+                    'первая', 'vtoraya', 'tretya', 'fourth', 'fifth','sixth', 'seven'
+                ]
+            ]
+        ];
     }
 }
