@@ -1,0 +1,17 @@
+.main__form {
+  text-align: center;
+  margin-top: 100px;
+}
+.main__form-item {
+  font-weight: bold;
+  font-size: 32px;
+  color: #000000;
+  background-color: #C7C7C7;
+  width: 950px;
+  height: 70px;
+  border-radius: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/*# sourceMappingURL=form.css.map */

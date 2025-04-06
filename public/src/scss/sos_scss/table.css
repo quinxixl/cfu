@@ -1,0 +1,35 @@
+.table__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.table__container-item {
+  display: flex;
+  flex-direction: column;
+}
+.table-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1043px;
+  height: 90px;
+  background-color: #C0C0C0;
+  border-radius: 40px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.table-container-2 {
+  display: flex;
+}
+.table__name {
+  font-size: 32px;
+}
+.table__description {
+  font-size: 32px;
+  font-weight: lighter;
+  margin-right: 30px;
+}
+
+/*# sourceMappingURL=table.css.map */

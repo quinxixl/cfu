@@ -1,12 +1,19 @@
 <div class="main__table table__container">
     {%for item in tableData %}
         <div class="table__item">
-            <p class="table__name">{{ item.name }}</p>
-            <p class="table__description">{{ item.count }}</p>
-            <a href="#" class="table__href">
-                <img src="#" alt="Открыть список" class="table__image">
-            </a>
+            <div class="table-container">
+                <div class="table-container-1">
+                    <p class="table__name">{{ item.name }}</p>
+                </div>
+                <div class="table-container-2">
+                    <p class="table__description">{{ item.count }}</p>
+                    <a href="#" class="table__href">
+                        <img src="/src/image/Capa_1.png" alt="Открыть список" class="table__image">
+                    </a>
+                </div>
+            </div>
             <div class="table__container-item">
+
                 {% for i in item.desc %}
                     <p class="table__title">{{ i }}</p>
                 {% endfor %}

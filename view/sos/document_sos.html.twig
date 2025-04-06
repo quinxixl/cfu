@@ -16,13 +16,12 @@
         {% endblock %}
     </header>
     <main class="main">
-        <h1 class="main__h1">
+        <h1 class="main__title">
             Документы
         </h1>
         <form action="#" class="main__form">
-            <input type="search" class="main__form-item form__search">
+            <input type="search" class="main__form-item form__search" placeholder="Поиск">
         </form>
-
         {% block table %}
             {{ include('@sos/table.html.twig') }}
         {% endblock %}

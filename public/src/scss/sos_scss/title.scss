@@ -1,6 +1,9 @@
-.main__title{
-    text-align: center;
-    font-size: 64px;
-    font-weight: bold;
-    margin-top: 40px;
+.main{
+    &__title{
+        text-align: center;
+        font-size: 64px;
+        font-weight: bold;
+        margin-top: 40px;
+    }
+
 }

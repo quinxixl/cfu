@@ -23,7 +23,7 @@ class DisciplinesController
      */
     public function showPage(): void
     {
-        $this->twig->render('@disciplines/disciplines.html.twig', ['discData' => $this->getData()]);
+        echo $this->twig->render('@disciplines/disciplines.html.twig', ['discData' => $this->getData()]);
     }
 
     private function getData(): array
