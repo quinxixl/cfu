@@ -1,0 +1,10 @@
+@import "chat.css";
+@import "courses.css";
+@import "mainPage.css";
+@import "header.css";
+@import "reset.css";
+
+body{
+    width: 100%;
+    background-color: #DADAF1;
+}
