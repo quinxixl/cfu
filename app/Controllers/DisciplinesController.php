@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Database\Database;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -28,15 +29,6 @@ class DisciplinesController
 
     private function getData(): array
     {
-        return [
-            [
-                'image' => 'test.jpg',
-                'title' => 'Чат'
-            ],
-            [
-                'image' => 'test.jpg',
-                'title'=> 'Курсы'
-            ]
-        ];
+        return Database::fetchColumns('disciplines', ['image', 'title']);
     }
 }

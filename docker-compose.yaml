@@ -11,6 +11,9 @@ services:
       - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
     depends_on:
       - db
+    command: >
+      sh -c "sass --watch /var/www/html/public/src/scss:/var/www/html/public/src/scss &
+             apache2-foreground"
 
   db:
     image: mysql:8.0
