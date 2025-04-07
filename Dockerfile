@@ -4,7 +4,10 @@ FROM php:8.4-apache
 RUN apt-get update && apt-get install -y \
     zip unzip git curl libpng-dev libonig-dev libxml2-dev libzip-dev \
     && docker-php-ext-install pdo pdo_mysql zip
-
+RUN apt-get update && apt-get install -y curl gnupg && \
+    curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get install -y nodejs && \
+    npm install -g sass
 # Установка Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 

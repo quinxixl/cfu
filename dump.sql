@@ -47,6 +47,31 @@ INSERT INTO `cards` VALUES (1,'01.02','test.jpg','левая тусовка ','l
 UNLOCK TABLES;
 
 --
+-- Table structure for table `disciplines`
+--
+
+DROP TABLE IF EXISTS `disciplines`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `disciplines` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `disciplines`
+--
+
+LOCK TABLES `disciplines` WRITE;
+/*!40000 ALTER TABLE `disciplines` DISABLE KEYS */;
+INSERT INTO `disciplines` VALUES (1,'Чат','chat.svg'),(2,'Курсы','courses.svg');
+/*!40000 ALTER TABLE `disciplines` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `sos`
 --
 
@@ -68,7 +93,7 @@ CREATE TABLE `sos` (
 
 LOCK TABLES `sos` WRITE;
 /*!40000 ALTER TABLE `sos` DISABLE KEYS */;
-INSERT INTO `sos` VALUES (1,'test.jpg','Документы','/sos/documents'),(2,'test.jpg','Общая информация о поступлении','/sos/info'),(3,'test.jpg','Предметы для поступления','/sos/entrance'),(4,'test.jpg','Программа','/sos/program'),(5,'test.jpg','Лекции','/sos/lectures'),(6,'test.jpg','Экзамены','/sos/exams');
+INSERT INTO `sos` VALUES (1,'docs.svg','Документы','/sos/documents'),(2,'general_info.svg','Общая информация о поступлении','/sos/info'),(3,'subjects.svg','Предметы для поступления','/sos/entrance'),(4,'program.svg','Программа','/sos/program'),(5,'lectures.svg','Лекции','/sos/lectures'),(6,'exams.svg','Экзамены','/sos/exams');
 /*!40000 ALTER TABLE `sos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -81,4 +106,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-06 16:32:01
+-- Dump completed on 2025-04-07 15:37:53
