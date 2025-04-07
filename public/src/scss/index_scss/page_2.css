@@ -423,18 +423,6 @@
   padding: 0;
   margin: 0;
 }
-.popup__Page2__vtb .poppup__1__vtb {
-  position: relative;
-  left: 317px;
-  bottom: 142px;
-  z-index: 2;
-}
-.popup__Page2__vtb .poppup__2__vtb {
-  position: relative;
-  right: 342px;
-  top: 150px;
-  z-index: 2;
-}
 .popup__Page2__vtb .poppup_btn_Page2__vtb {
   display: flex;
   justify-content: center;
