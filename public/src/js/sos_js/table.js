@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggles = document.querySelectorAll('.toggle-dropdown');
 
     toggles.forEach(toggle => {
-        toggle.addEventListener('click', function (e) {
-            e.preventDefault();
+        toggle.addEventListener('click', function (evt) {
+            evt.preventDefault();
 
             const item = this.closest('.table__item');
             const container = item.querySelector('.table__container-item');
