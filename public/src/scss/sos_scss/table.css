@@ -9,6 +9,7 @@
 .table__container-item {
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 }
 .table-container {
   display: flex;
@@ -32,6 +33,15 @@
   font-weight: lighter;
   margin-right: 30px;
 }
+.table__title {
+  width: 1010px;
+  margin-left: 30px;
+  background-color: #C0C0C0;
+  margin-top: 20px;
+  font-size: 29px;
+  border-radius: 30px;
+  padding: 20px;
+}
 
 .table__image {
   transition: transform 0.3s ease;
@@ -40,5 +50,3 @@
 .table__image.rotated {
   transform: rotate(90deg);
 }
-
-/*# sourceMappingURL=table.css.map */
