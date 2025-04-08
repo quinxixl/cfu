@@ -1,3 +1,43 @@
+.main__title {
+  font-size: 96px;
+  font-weight: bold;
+  margin-top: 100px;
+  text-align: center;
+}
 
+.card__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 150px;
+  margin-top: 100px;
+}
+.card__wrapper {
+  background-color: #6D6CA3;
+  border-radius: 30px;
+  width: 550px;
+  height: 550px;
+}
+.card__href {
+  display: block;
+  width: 550px;
+  height: 550px;
+  cursor: pointer;
+}
+.card__image {
+  margin-top: 40px;
+  margin-left: 180px;
+}
+.card__image-2 {
+  margin-top: 40px;
+  margin-left: 100px;
+}
+.card__title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 64px;
+  font-weight: bold;
+  color: white;
+}
 
 /*# sourceMappingURL=mainPage.css.map */

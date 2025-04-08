@@ -18,16 +18,21 @@
                 {{ include('@relax/header.html.twig') }}
             {% endblock %}
         </header>
-        <p class="main__title">Дисциплины</p>
         <main class="main">
             <p class="main__title">Дисциплина</p>
-            <div class="container">
-                {% for item in discData %}
-                    <a href="#" class="card__href">
-                        <img src="/src/image/{{ item.image }}" class="card__image" alt="">
-                        <p class="card__title">{{ item.title }}</p>
-                    </a>
-                {% endfor %}
+            <div class="card__container">
+                <a href="/disciplines/chat" class="card__href">
+                    <div class="card__wrapper">
+                        <img src="/src/image/chat.svg" class="card__image" alt="">
+                        <p class="card__title">Чат</p>
+                    </div>
+                </a>
+                <a href="/disciplines/courses" class="card__href">
+                    <div class="card__wrapper">
+                        <img src="/src/image/courses.svg" class="card__image-2" alt="">
+                        <p class="card__title">Курсы</p>
+                    </div>
+                </a>
             </div>
         </main>
     </body>

@@ -1,6 +1,8 @@
 <?php
 
+use App\Controllers\DisciplinesChatController;
 use App\Controllers\DisciplinesController;
+use App\Controllers\DisciplinesCoursesController;
 use App\Controllers\IndexController;
 use App\Controllers\LoginController;
 use App\Controllers\RegistrationController;
@@ -29,4 +31,6 @@ return simpleDispatcher(function (RouteCollector $r) {
     $r->addRoute('GET', '/sos/program', [SosProgramController::class, 'showPage']);
     $r->addRoute('GET', '/sos/lectures', [SosLecturesController::class, 'showPage']);
     $r->addRoute('GET','/disciplines', [DisciplinesController::class, 'showPage']);
+    $r->addRoute('GET', '/disciplines/chat', [DisciplinesChatController::class, 'showPage']);
+    $r->addRoute('GET', '/disciplines/courses', [DisciplinesCoursesController::class, 'showPage']);
 });

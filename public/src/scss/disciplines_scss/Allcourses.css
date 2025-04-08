@@ -1,0 +1,40 @@
+@import "header.css";
+@import "font.css";
+@import "courses.css";
+@import "reset.css";
+
+body {
+    width: 100%;
+    background-color: #DADAF1;
+}
+
+.main__title {
+    font-size: 96px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.main__form {
+    margin-left: 30px;
+    text-align: center;
+    margin-top: 60px;
+}
+.main__form-item {
+    font-weight: bold;
+    font-size: 40px;
+    color: #000000;
+    background-color: #C7C7C7;
+    width: 950px;
+    height: 80px;
+    border-radius: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.form__search{
+    position: relative;
+    top: 25px;
+    right: 80px;
+    width: 30px;
+    height: 30px;
+}
