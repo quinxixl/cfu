@@ -26,13 +26,17 @@
         <div class="courses__container">
             {% for item in coursesData %}
                 <div class="courses__wrapper">
-                    <div class="courses__block-1">
-                        <img class="courses__immage" src="/src/image/{{ item.image }}" alt="">
-                    </div>
-                    <div class="courses__block-2">
-                        <p class="courses__title">{{ item.title }}</p>
-                        <p class="courses__description">{{ item.description }}</p>
-                    </div>
+                    <a href="#" class="courses__href">
+                        <div class="courses__block-1">
+                            <img class="courses__image" src="/src/image/{{ item.image }}" alt="">
+                        </div>
+                    </a>
+                    <a href="" class="courses__href-2">
+                        <div class="courses__block-2">
+                            <p class="courses__title">{{ item.title }}</p>
+                            <p class="courses__description">{{ item.description }}</p>
+                        </div>
+                    </a>
                 </div>
             {% endfor %}
         </div>

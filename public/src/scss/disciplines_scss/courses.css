@@ -1,3 +1,37 @@
-
-
-/*# sourceMappingURL=courses.css.map */
+.courses__container {
+  margin-top: 69px;
+  margin-left: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.courses__wrapper {
+  display: flex;
+  gap: 15px;
+}
+.courses__href-2 {
+  height: 150px;
+}
+.courses__image {
+  border-radius: 20px;
+}
+.courses__block-2 {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #EFEFEF;
+  width: 1567px;
+  height: 150px;
+}
+.courses__title {
+  color: black;
+  padding-top: 16px;
+  padding-left: 31px;
+  font-size: 32px;
+  font-weight: bold;
+}
+.courses__description {
+  color: black;
+  margin-top: 13px;
+  font-size: 24px;
+  padding-left: 31px;
+}

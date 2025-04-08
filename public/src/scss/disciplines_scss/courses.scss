@@ -1,0 +1,45 @@
+.courses{
+  &__container{
+    margin-top: 69px;
+    margin-left: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__wrapper{
+    display: flex;
+    gap: 15px;
+  }
+
+  &__href-2{
+    height: 150px;
+  }
+
+  &__image{
+    border-radius: 20px;
+  }
+
+  &__block-2{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #EFEFEF;
+    width: 1567px;
+    height: 150px;
+  }
+
+  &__title{
+    color: black;
+    padding-top: 16px;
+    padding-left: 31px;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &__description{
+    color: black;
+    margin-top: 13px;
+    font-size: 24px;
+    padding-left: 31px;
+  }
+}
