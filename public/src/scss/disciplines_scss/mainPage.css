@@ -1,3 +1,8 @@
-
+.main__title {
+  text-align: center;
+  font-size: 96px;
+  font-weight: bold;
+  margin-top: 100px;
+}
 
 /*# sourceMappingURL=mainPage.css.map */

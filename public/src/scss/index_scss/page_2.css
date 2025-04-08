@@ -220,19 +220,6 @@
   position: relative;
   bottom: 40px;
 }
-.popup__Page2__wb .poppup__1__wb {
-  position: relative;
-  left: 215px;
-  bottom: 185px;
-  z-index: 2;
-}
-.popup__Page2__wb .poppup__2__wb {
-  position: relative;
-  right: 215px;
-  top: 185px;
-  transform: rotate(180deg);
-  z-index: 2;
-}
 .popup__Page2__wb .poppup_btn_Page2__wb {
   display: flex;
   justify-content: center;
@@ -316,18 +303,6 @@
 .popup__Page2__ks .poppup__content__Page2__ks .ks__p__2 {
   position: relative;
   bottom: 50px;
-}
-.popup__Page2__ks .poppup__1__ks {
-  position: relative;
-  left: 247px;
-  bottom: 169px;
-  z-index: 2;
-}
-.popup__Page2__ks .poppup__2__ks {
-  position: relative;
-  right: 247px;
-  top: 169px;
-  z-index: 2;
 }
 .popup__Page2__ks .poppup_btn_Page2__ks {
   display: flex;
