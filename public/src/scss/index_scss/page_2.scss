@@ -208,19 +208,6 @@
       bottom: 40px;
     }
   }
-  .poppup__1__wb{
-    position: relative;
-    left: 215px;
-    bottom: 185px;
-    z-index: 2;
-  }
-  .poppup__2__wb{
-    position: relative;
-    right: 215px;
-    top: 185px;
-    transform: rotate(180deg);
-    z-index: 2;
-  }
   .poppup_btn_Page2__wb{
     display: flex;
     justify-content: center;
@@ -311,25 +298,13 @@
       bottom: 50px;
     }
   }
-  .poppup__1__ks{
-    position: relative;
-    left: 247px;
-    bottom: 169px;
-    z-index: 2;
-  }
-  .poppup__2__ks{
-    position: relative;
-    right: 247px;
-    top: 169px;
-    z-index: 2;
-  }
   .poppup_btn_Page2__ks{
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     bottom: 280px;
-    left: 920px;
+    left: 880px;
     z-index: 2;
     background-color: #007461;
     width: 40px;
@@ -431,7 +406,7 @@
     align-items: center;
     position: relative;
     bottom: 280px;
-    left: 1000px;
+    left: 880px;
     z-index: 2;
     background-color: #002561;
     width: 40px;
