@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                     <a class="main__card-btn" href="#">Подробнее</a>
                     <p class="main__card-title">${item.title}</p>
-                    <img src="/src/image/${item.organizer}" alt="#" class="main__card-organizer">
+                    <img src="/src/image/${item.organizer_logo}" alt="#" class="main__card-organizer">
                 </div>
             `;
             sliderContainer.appendChild(slide);

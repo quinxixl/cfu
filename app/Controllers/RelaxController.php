@@ -30,11 +30,11 @@ class RelaxController
 
     private function getSliderData(): array
     {
-        return Database::fetchColumns('cards', ['date', 'image', 'description', 'title', 'organizer'], 'id <= ?', [6]);
+        return Database::fetchColumns('cards', ['date', 'image', 'description', 'title', 'organizer_logo'], 'id <= ?', [6]);
     }
     private function getCardData(): array
     {
-        return Database::fetchColumns('cards', ['image', 'title', 'organizer', 'poppup_desc', 'event_link', 'logo']);
+        return Database::fetchColumns('cards', ['image', 'title', 'organizer_logo', 'poppup_desc', 'event_link', 'logo']);
     }
 
 }

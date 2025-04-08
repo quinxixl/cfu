@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Database\Database;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -21,6 +22,11 @@ class DisciplinesCoursesController
      */
     public function showPage(): void
     {
-        echo $this->twig->render('@disciplines/courses.html.twig');
+        echo $this->twig->render('@disciplines/courses.html.twig', ['coursesData' => $this->getCoursesData()]);
+    }
+
+    private function getCoursesData(): array
+    {
+        return Database::fetchColumns('courses', ['title', 'description', 'image']);
     }
 }
