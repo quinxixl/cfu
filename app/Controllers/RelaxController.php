@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Controllers;
-use App\Collections\RelaxCollection;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -30,11 +29,35 @@ class RelaxController
 
     private function getSliderData(): array
     {
-        return Database::fetchColumns('cards', ['date', 'image', 'description', 'title', 'organizer_logo'], 'id <= ?', [6]);
+        $data = Database::fetchColumns('cards', ['date', 'image', 'description', 'title', 'organizer_logo'], 'id <= ?', [6]);
+
+        foreach ($data as &$row) {
+            if (isset($row['date'])) {
+                $row['date'] = date('d.m', strtotime($row['date']));
+            }
+        }
+
+        return $data;
     }
     private function getCardData(): array
     {
         return Database::fetchColumns('cards', ['image', 'title', 'organizer_logo', 'poppup_desc', 'event_link', 'logo']);
     }
+    public function filter(): void
+    {
+        $search = $_GET['search'] ?? '';
+        $type = $_GET['type'] ?? '';
+        $sort = $_GET['sort'] ?? '';
 
+        $events = Database::fetchFilteredEvents($search, $sort, $type);
+
+        foreach ($events as &$event) {
+            if (isset($event['date'])) {
+                $event['date'] = date('d.m', strtotime($event['date']));
+            }
+        }
+
+        header('Content-Type: application/json');
+        echo json_encode($events);
+    }
 }

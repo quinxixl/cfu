@@ -50,4 +50,31 @@ class Database
         $stmt->execute($params);
         return $stmt->fetchAll();
     }
+    public static function fetchFilteredEvents(?string $search = '', ?string $sort = '', ?string $type = ''): array {
+        $sql = "SELECT cards.*, organizers.title AS organizer_title, organizers.logo AS organizer_logo
+            FROM cards
+            LEFT JOIN organizers ON cards.organizer_id = organizers.id
+            WHERE 1";
+        $params = [];
+
+        if ($search) {
+            $sql .= " AND (cards.title LIKE :search OR cards.description LIKE :search)";
+            $params[':search'] = "%$search%";
+        }
+
+        if ($type) {
+            $sql .= " AND cards.type = :type";
+            $params[':type'] = $type;
+        }
+
+        if ($sort === 'date') {
+            $sql .= " ORDER BY cards.date ASC";
+        } elseif ($sort === 'organizer') {
+            $sql .= " ORDER BY organizers.title ASC";
+        }
+
+        $stmt = self::connect()->prepare($sql);
+        $stmt->execute($params);
+        return $stmt->fetchAll();
+    }
 }

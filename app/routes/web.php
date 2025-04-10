@@ -19,6 +19,7 @@ use function FastRoute\simpleDispatcher;
 
 return simpleDispatcher(function (RouteCollector $r) {
     $r->addRoute("GET", '/relax', [RelaxController::class, 'showPage']);
+    $r->addRoute('GET', '/relax/filter', [RelaxController::class, 'filter']);
     $r->addRoute("GET", "/", [IndexController::class, 'showPage']);
     $r->addRoute('GET', '/register', [RegistrationController::class, 'showPage']);
     $r->addRoute('POST', '/register', [RegistrationController::class, 'registrationProcess']);

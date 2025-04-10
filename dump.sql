@@ -24,13 +24,14 @@ DROP TABLE IF EXISTS `cards`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cards` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `date` varchar(255) DEFAULT NULL,
+  `date` date DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `logo` varchar(255) DEFAULT NULL,
   `organizer_logo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `organizer_id` bigint DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
   `poppup_desc` text,
   `event_link` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -45,7 +46,7 @@ CREATE TABLE `cards` (
 
 LOCK TABLES `cards` WRITE;
 /*!40000 ALTER TABLE `cards` DISABLE KEYS */;
-INSERT INTO `cards` VALUES (1,'01.02','test.jpg','левая тусовка ','lb1','bigcfu.svg','smallcfu.svg',NULL,'еще бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(2,'02.03','test.jpg','главная тусовка','lb2','bigcfu.svg','smallcfu.svg',NULL,'еще бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(3,'04.03','test.jpg','правая тусовка','lb3','bigcfu.svg','smallcfu.svg',NULL,'еще бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(4,'04.04','test.jpg','бибибиби','lb4','bigcfu.svg','smallcfu.svg',NULL,'еще бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(5,'04.05','test.jpg','бибибиби','lb5','bigcfu.svg','smallcfu.svg',NULL,'еще бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(6,'12.12','test.jpg','пипипупу','lb6','bigcfu.svg','smallcfu.svg',NULL,'еще бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(7,'04.10','test.jpg','бебебебе','lb7','bigcfu.svg','smallcfu.svg',NULL,'бла бла бла бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(8,'04.11','test.jpg','бебебебе','lb8','bigcfu.svg','smallcfu.svg',NULL,'бла бла бла бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(9,'10.12','test.jpg','бебебебе','lb9','bigcfu.svg','smallcfu.svg',NULL,'бла бла бла бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(10,'10.10','test.jpg','бебебебе','lb10','bigcfu.svg','smallcfu.svg',NULL,'бла бла бла бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com');
+INSERT INTO `cards` VALUES (1,'2025-12-12','test.jpg','левая тусовка ','Развитие технологий','bigcfu.svg','smallcfu.svg',1,'Научная конференция','еще бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(2,'2025-11-30','test.jpg','главная тусовка','Тусовка с маканом','bigcfu.svg','smallcfu.svg',2,'Развлечения','еще бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(3,'2025-09-25','test.jpg','правая тусовка','RIP Паша. Прощание','bigcfu.svg','smallcfu.svg',3,'Развлечения','еще бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(4,'2025-09-13','test.jpg','бибибиби','Как писать код?','bigcfu.svg','smallcfu.svg',1,'Мастер-класс','еще бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(5,'2025-04-09','test.jpg','бибибиби','Развитие эмбриона в матке','bigcfu.svg','smallcfu.svg',2,'Научная конференция','еще бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(6,'2025-03-16','test.jpg','пипипупу','Ошибки в развитии бизнеса','bigcfu.svg','smallcfu.svg',1,'Научная конференция','еще бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(7,'2025-02-23','test.jpg','бебебебе','JAM тусовка','bigcfu.svg','smallcfu.svg',3,'Развлечения','бла бла бла бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(8,'2025-07-01','test.jpg','бебебебе','Как не вылететь с ВУЗа','bigcfu.svg','smallcfu.svg',1,'Учебная конференция','бла бла бла бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(9,'2025-07-07','test.jpg','бебебебе','Как сдать вышмат?','bigcfu.svg','smallcfu.svg',2,'Учебная конференция','бла бла бла бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com'),(10,'2025-03-31','test.jpg','бебебебе','Учимся делать сайты на тильде','bigcfu.svg','smallcfu.svg',2,'Мастер-класс','бла бла бла бла бла бла бла бла бла бла бла описание для попапа','https://youtube.com');
 /*!40000 ALTER TABLE `cards` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,4 +161,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-08 17:04:09
+-- Dump completed on 2025-04-10 11:35:20
