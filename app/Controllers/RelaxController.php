@@ -24,7 +24,7 @@ class RelaxController
      */
     public function showPage(): void
     {
-        echo $this->twig->render('@relax/relax.html.twig', ['sliderData' => $this->getSliderData(), 'cardData' => $this->getCardData()]);
+        echo $this->twig->render('@relax/relax.html.twig', ['sliderData' => $this->getSliderData(), 'cardData' => $this->getCardData(), 'orgData' => $this->getOrgData(), 'viewData' => $this->getViewData()]);
     }
 
     private function getSliderData(): array
@@ -42,6 +42,16 @@ class RelaxController
     private function getCardData(): array
     {
         return Database::fetchColumns('cards', ['image', 'title', 'organizer_logo', 'poppup_desc', 'event_link', 'logo']);
+    }
+
+    private function getOrgData(): array
+    {
+        return Database::fetchColumns('organizers', ['title']);
+    }
+
+    private function getViewData(): array
+    {
+        return Database::fetchColumns('cards', ['type']);
     }
     public function filter(): void
     {

@@ -11,9 +11,19 @@
        </div>
         <div class="organize__container all__container">
             <a href="#" class="btn__organize all__btn">Организатор</a>
+            <div class="filter__container" style="display: none">
+                {% for item in orgData %}
+                    <a class="filter__item">{{ item.title }}</a>
+                {% endfor %}
+            </div>
         </div>
         <div class="view__container all__container">
             <a href="" class="btn__view all__btn">Вид</a>
+            <div class="filter__container" style="display: none">
+                {% for item in viewData %}
+                    <div class="filter__div"><a class="filter__item">{{ item.type }}</a></div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </form>
