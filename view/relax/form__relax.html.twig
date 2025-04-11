@@ -1,29 +1,31 @@
 <form action="#">
     <div class="search__container">
         <input type="search" id="search__form" class="search__form" placeholder="Поиск">
-        <a href="#" class="search__btn">
+        <button class="search__btn">
             <img src="src/image/Frame.png" alt="" class="glass">
-        </a>
+        </button>
     </div>
-    <div class="filter__container">
-       <div class="date__container all__container">
-           <a href="#" class="btn__date all__btn">Дата</a>
-       </div>
-        <div class="organize__container all__container">
-            <a href="#" class="btn__organize all__btn">Организатор</a>
-            <div class="filter__container" style="display: none">
-                {% for item in orgData %}
-                    <a class="filter__item">{{ item.title }}</a>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="view__container all__container">
-            <a href="" class="btn__view all__btn">Вид</a>
-            <div class="filter__container" style="display: none">
-                {% for item in viewData %}
-                    <div class="filter__div"><a class="filter__item">{{ item.type }}</a></div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+    <ul class="filter__container">
+
+           <li class="date__container all__container">
+               <a href="#" class="btn__date all__btn">Дата</a>
+           </li>
+            <li class="organize__container all__container">
+                <a href="#" class="btn__organize all__btn">Организатор</a>
+                <div class="choose--container">
+                    <ul class="choose__ul"  id="organizer__container">
+
+                    </ul>
+                </div>
+            </li>
+            <li class="view__container all__container">
+                <button class="btn__view all__btn">Вид</button>
+                <div class="choose--container" >
+                    <div class="filer--container">
+
+                    </div>
+                </div>
+            </li>
+
+    </ul>
 </form>

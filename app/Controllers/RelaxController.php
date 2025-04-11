@@ -59,15 +59,15 @@ class RelaxController
         $type = $_GET['type'] ?? '';
         $sort = $_GET['sort'] ?? '';
 
-        $events = Database::fetchFilteredEvents($search, $sort, $type);
+        $filterData = Database::fetchFilteredEvents($search, $sort, $type);
 
-        foreach ($events as &$event) {
+        foreach ($filterData as &$event) {
             if (isset($event['date'])) {
                 $event['date'] = date('d.m', strtotime($event['date']));
             }
         }
 
         header('Content-Type: application/json');
-        echo json_encode($events);
+        echo json_encode($filterData);
     }
 }

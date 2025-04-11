@@ -60,4 +60,34 @@
     width:150px ;
     height:50px ;
   }
+
+
+}
+
+.choose{
+  &--container{
+
+  }
+
+  &__href{
+    display: inline-block;
+  }
+
+  &-item{
+    position: relative;
+  }
+
+  &__ul{
+    display: block;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.btn__organize:hover .choose__ul{
+  opacity: 1;
+  pointer-events: auto;
 }

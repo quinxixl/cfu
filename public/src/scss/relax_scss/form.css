@@ -54,3 +54,23 @@
   width: 150px;
   height: 50px;
 }
+
+.choose__href {
+  display: inline-block;
+}
+.choose-item {
+  position: relative;
+}
+.choose__ul {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn__organize:hover .choose__ul {
+  opacity: 1;
+  pointer-events: auto;
+}
